@@ -8,7 +8,7 @@ import os
 from data_load_twodecoder import custom_dataset
 from torch.utils.data import DataLoader
 # from Unet2D import UNet2D
-from SAM_twodecoder import SAMDecoder
+from SAM_twodecoder import SAMTDecoder
 from torchvision import transforms as tfs
 from util_unet_train_twodecoder import train,DiceLoss
 # import segmentation_models_pytorch as smp
@@ -63,7 +63,8 @@ test_data = DataLoader(test_dataset, 1, shuffle=False, collate_fn=collate_fn)
 print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 train_dataset_100 = custom_dataset('/home/zxk/code/D2GPLand-2/D2PGL_DATA/Train', transform=data_transforms['train'])
 train_data_100 = DataLoader(train_dataset_100, 1, shuffle=True, collate_fn=collate_fn)
-net = D2GPLand()
+# net = D2GPLand()
+net = SAMTDecoder()
 optimize = torch.optim.SGD(net.parameters(), lr=0.01)
 criterion = DiceLoss()
 
