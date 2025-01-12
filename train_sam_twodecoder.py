@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 # from Unet2D import UNet2D
 from SAM_twodecoder import SAMTDecoder
 from torchvision import transforms as tfs
-from util_unet_train_twodecoder import train,DiceLoss
+from util_sam_train_twodecoder import train,DiceLoss
 # import segmentation_models_pytorch as smp
 # import pretrainedmodels
 def seed_torch(seed=3047):
