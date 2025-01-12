@@ -31,3 +31,5 @@ sam = sam_model_registry["vit_b"](
     checkpoint="sam_path/sam_vit_b_01ec64.pth"
 )
 
+self.sam_encoder = sam.image_encoder
+
