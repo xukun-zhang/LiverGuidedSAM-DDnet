@@ -2,7 +2,7 @@
 
 ## Overview
 
-LiverGuidedSAM-DDnet is a novel segmentation framework designed for anatomical landmark detection in augmented reality (AR)-guided laparoscopic liver surgeries. By leveraging liver segmentation as a spatial reference and incorporating pre-trained SAM encoder features, our method improves the accuracy and robustness of landmark segmentation, even in complex surgical environments.
+LiverGuidedSAM-DDnet is a novel segmentation framework designed for anatomical landmark detection in augmented reality (AR)-guided laparoscopic liver surgeries. By leveraging liver segmentation as a spatial reference and incorporating pre-trained SAM encoder features, our method improves the accuracy and robustness of landmark segmentation, even in **complex surgical environments**.
 
 ---
 
@@ -24,7 +24,7 @@ AR navigation in laparoscopic liver surgery relies heavily on accurate 2D-to-3D 
 
 ## Surgeon-Inspired Motivation
 
-This study is motivated by the way expert surgeons intuitively interpret liver appearance and structure, even under challenging laparoscopic conditions. Surgeons rely on:  
+This study is motivated by the way **expert surgeons** intuitively **interpret liver appearance and structure**, even **under challenging laparoscopic conditions**. Surgeons rely on:  
 1. **Spatial Understanding:**  
    - By observing the overall liver morphology, they can infer the locations of subtle landmarks.  
 2. **Robustness to Noise:**  
@@ -38,7 +38,7 @@ Our goal is to replicate this human expertise by designing a segmentation framew
 
 ### Innovative Design Inspired by Surgeons
 
-To emulate the expertise of surgeons, our framework incorporates several innovative components:
+**To emulate the expertise of surgeons**, our framework incorporates several innovative components:
 
 1. **Dual-Decoder Architecture:**  
    - Addresses **feature entanglement** by independently segmenting the liver and landmarks, enabling task-specific optimization.  
@@ -58,11 +58,17 @@ To emulate the expertise of surgeons, our framework incorporates several innovat
 
 The dataset used for training and evaluation is structured as follows:
 
-### Train or Val or Test
+### Directory Structure
 
 - **images**: Contains all laparoscopic image files in `.jpg` format. Filenames must match the corresponding label and liver region files.  
 - **labels**: Contains ground truth label images for landmarks in `.png` format. Filenames must match the corresponding image files.  
-- **livers**: Contains ground truth liver region images in `.png` format. Filenames must match the corresponding image and label files.
+- **livers**: Contains ground truth liver region images in `.png` format. Filenames must match the corresponding image and label files.  
+
+### Data Sources
+
+The datasets and landmark annotations used in this work are sourced from:  
+1. **L3D Dataset**: Available at [D2GPLand GitHub Repository](https://github.com/PJLallen/D2GPLand).  
+2. **P2ILF Challenge Dataset**: Data can be accessed upon request from the organizers via the [P2ILF GitHub Repository](https://github.com/sharib-vision/P2ILF).  
 
 ---
 
