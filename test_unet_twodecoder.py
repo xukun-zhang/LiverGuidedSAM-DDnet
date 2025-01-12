@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader
 # from models.D2GPLand_twodecoder import D2GPLand
 from SAM_twodecoder import SAMTDecoder
 from torchvision import transforms as tfs
-from util_unet_test_twodecoder import test
+from util_sam_test_twodecoder import test
 
 
 
