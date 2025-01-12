@@ -8,7 +8,8 @@ from skimage.measure import label as la
 from data_load_twodecoder import custom_dataset
 from torch.utils.data import DataLoader
 # from Unet2D import UNet2D
-from models.D2GPLand_twodecoder import D2GPLand
+# from models.D2GPLand_twodecoder import D2GPLand
+from SAM_twodecoder import 
 from torchvision import transforms as tfs
 from util_unet_test_twodecoder import test
 
