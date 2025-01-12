@@ -118,10 +118,10 @@ class BasicBlock(nn.Module):
 
 
 
-class SAMDecoder(nn.Module):
+class SAMTDecoder(nn.Module):
     def __init__(self, in_channels=3, out_channels=4, init_channels=8, p=0.2):
 
-        super(SAMDecoder, self).__init__()
+        super(SAMTDecoder, self).__init__()
 
         sam = sam_model_registry["vit_b"](
             checkpoint="sam_path/sam_vit_b_01ec64.pth")
